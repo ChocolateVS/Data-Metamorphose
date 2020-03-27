@@ -1,0 +1,198 @@
+body {
+  background: rgba(120, 70, 198, 0.7);
+  color: #ffffff;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+input {
+  height:30px;
+  background-color: rgba(255,255,255,0.4);
+  border:none;
+  text-align: center;
+}
+
+.inputShift {
+    width:20%;
+}
+.inputCaeser {
+    width:42%;
+}
+.input {
+  width:65%;
+}
+.rgbInput {
+  width: 15%;
+  font-style:bold;
+  font-size:16px;
+}
+input::placeholder {
+  text-align: center;
+  color:rgba(0 ,0, 0, 1);
+  font-family: 'Roboto Mono', monospace;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+#inline {
+    display: inline-block;
+}
+select {
+  background-color: rgba(255,255,255,0.1);
+  border:none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: white;
+}
+
+option {
+  background-color: rgba(0,0,0,0.8);
+  border:none;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: white;
+}
+
+.border, #randomColor {
+  border-color: black;
+  border-style: solid;
+  padding:10px;
+  margin:20px;
+  width:100%;
+}
+
+#menu {
+    float:left;
+    height:auto;
+    text-align: left;
+    display:inline-block;
+    position: top;
+    position: sticky;
+}
+h2 {
+  font-size:20px;
+  padding:0;
+  margin:0;
+}
+table, tr, th {
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-collapse: separate;
+    border-spacing: 1px;
+    border-color: black;
+    font-size: 20px;
+}
+button {
+  border-radius:8px;
+	border:none;
+  font-size: 15px;
+  color:rgba(255,255,255,0.6);
+  background-color: rgba(0 ,0, 0, 0.6);
+  margin: 7px;
+  padding:7px;
+  font-family: 'Roboto Mono', monospace;
+}
+button:hover {
+  color:white;
+}
+h1 {
+  font-weight: 200;
+  font-style: 26px;
+  margin: 10px;
+}
+
+footer {
+  position: relative;
+  float:right;
+  right:0;
+  bottom:0;
+}
+
+.popup {
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* The actual popup */
+
+.popup .popuptext {
+  width:200px;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 7px 7px;
+  position: absolute;
+  z-index: 1;
+  left: 365px;
+  top:10%;
+}
+
+/* Popup arrow */
+
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent rgba(0, 0, 0, 0.4) transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+
+.popup #buttonHover:hover + .popuptext {
+  transition-delay: 0.7s;
+  visibility: hidden;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  transition: background-color 5000s ease-in-out 0s
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+#R-HEX {
+  color:red;
+}
+#G-HEX {
+  color:rgb(0,255,0);
+}
+#B-HEX {
+  color:blue;
+}
