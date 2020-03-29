@@ -1,166 +1,3 @@
-////////////MENU///////////
-var checked = true;
-function menu(num){
-    var dec = document.getElementById("checkbox_1").checked;
-    var bin = document.getElementById("checkbox_2").checked;
-    var asc = document.getElementById("checkbox_3").checked;
-    var char = document.getElementById("checkbox_4").checked;
-    var hex = document.getElementById("checkbox_5").checked;
-    var encr = document.getElementById("checkbox_6").checked;
-    var decr = document.getElementById("checkbox_7").checked;
-    var rgb = document.getElementById("checkbox_8").checked;
-    var color = document.getElementById("checkbox_9").checked;
-    if (num == 10 && checked == true) {
-        document.getElementById("checkbox_1").checked = false;
-        document.getElementById("checkbox_2").checked = false;
-        document.getElementById("checkbox_3").checked = false;
-        document.getElementById("checkbox_4").checked = false;
-        document.getElementById("checkbox_5").checked = false;
-        document.getElementById("checkbox_6").checked = false;
-        document.getElementById("checkbox_7").checked = false;
-        document.getElementById("checkbox_8").checked = false;
-        document.getElementById("checkbox_9").checked = false;
-        checked = false;
-        
-        document.getElementById("bitBinDec").style.display="none";
-        document.getElementById("binDec").style.display="none";
-        document.getElementById("binAsc").style.display="none";
-        document.getElementById("decBin").style.display="none";
-        document.getElementById("decHEX").style.display="none";
-        document.getElementById("charAsc").style.display="none";
-        document.getElementById("ascChar").style.display="none";
-        document.getElementById("ascBin").style.display="none";
-        document.getElementById("charBin").style.display="none";
-        document.getElementById("shift").style.display="none";
-        document.getElementById("rgbHEX").style.display="none";
-        document.getElementById("hexRGB").style.display="none";
-        document.getElementById("randomColor").style.display="none";
-        
-        return;
-    } 
-    if (num == 10 && checked == false) {
-        document.getElementById("checkbox_1").checked = true;
-        document.getElementById("checkbox_2").checked = true;
-        document.getElementById("checkbox_3").checked = true;
-        document.getElementById("checkbox_4").checked = true;
-        document.getElementById("checkbox_5").checked = true;
-        document.getElementById("checkbox_6").checked = true;
-        document.getElementById("checkbox_7").checked = true;
-        document.getElementById("checkbox_8").checked = true;
-        document.getElementById("checkbox_9").checked = true;
-        checked = true;
-        
-        document.getElementById("bitBinDec").style.display="block";
-        document.getElementById("binDec").style.display="block";
-        document.getElementById("binAsc").style.display="block";
-        document.getElementById("decBin").style.display="block";
-        document.getElementById("decHEX").style.display="block";
-        document.getElementById("charAsc").style.display="block";
-        document.getElementById("ascChar").style.display="block";
-        document.getElementById("ascBin").style.display="block";
-        document.getElementById("charBin").style.display="block";
-        document.getElementById("shift").style.display="block";
-        document.getElementById("rgbHEX").style.display="block";
-        document.getElementById("hexRGB").style.display="block";
-        document.getElementById("randomColor").style.display="block";
-        
-        return;
-    }
-    if (dec && num == 1) {
-        console.log("DEC VIS");
-        document.getElementById("bitBinDec").style.display="block";
-        document.getElementById("binDec").style.display="block";
-        document.getElementById("decBin").style.display="block";
-        document.getElementById("decHEX").style.display="block";
-    }else if (!dec && num ==1){
-        console.log("DEC INVIS");
-        document.getElementById("bitBinDec").style.display="none";
-        document.getElementById("binDec").style.display="none";
-        document.getElementById("decBin").style.display="none";
-        document.getElementById("decHEX").style.display="none";
-    }
-    
-    if (bin && num == 2) {
-        console.log("BIN VIS");
-        document.getElementById("bitBinDec").style.display="block";
-        document.getElementById("binDec").style.display="block";
-        document.getElementById("binAsc").style.display="block";
-        document.getElementById("decBin").style.display="block";
-        document.getElementById("ascBin").style.display="block";
-        document.getElementById("charBin").style.display="block";
-    }else if (!bin && num == 2){
-        console.log("BIN INVIS");
-        document.getElementById("bitBinDec").style.display="none";
-        document.getElementById("binDec").style.display="none";
-        document.getElementById("binAsc").style.display="none";
-        document.getElementById("decBin").style.display="none";
-        document.getElementById("ascBin").style.display="none";
-        document.getElementById("charBin").style.display="none";
-    }
-    
-    if (asc && num == 3) {
-        document.getElementById("binAsc").style.display="block";
-        document.getElementById("charAsc").style.display="block";
-        document.getElementById("ascChar").style.display="block";
-        document.getElementById("ascBin").style.display="block";
-    }else if (!asc && num == 3){
-        document.getElementById("binAsc").style.display="none";
-        document.getElementById("charAsc").style.display="none";
-        document.getElementById("ascChar").style.display="none";
-        document.getElementById("ascBin").style.display="none";
-    }
-    
-    if (char && num == 4) {
-        document.getElementById("charAsc").style.display="block";
-        document.getElementById("ascChar").style.display="block";
-        document.getElementById("charBin").style.display="block";
-    }else if (!char && num == 4){
-        document.getElementById("charAsc").style.display="none";
-        document.getElementById("ascChar").style.display="none";
-        document.getElementById("charBin").style.display="none";
-    }
-    
-    if (hex && num == 5) {
-        document.getElementById("decHEX").style.display="block";
-        document.getElementById("rgbHEX").style.display="block";
-        document.getElementById("hexRGB").style.display="block";
-    }else if (!hex && num == 5){
-        document.getElementById("decHEX").style.display="none";
-        document.getElementById("rgbHEX").style.display="none";
-        document.getElementById("hexRGB").style.display="none";
-    }
-    
-    if (encr && num == 6) {
-        document.getElementById("shift").style.display="block";
-    }else if (!encr && num == 6){
-        document.getElementById("shift").style.display="none";
-    }
-    
-    if (decr && num == 7) {
-        document.getElementById("shift").style.display="block";
-    }else if (!decr && num == 7){
-        document.getElementById("shift").style.display="none";
-    }
-    
-    if (rgb && num == 8) {
-        document.getElementById("rgbHEX").style.display="block";
-        document.getElementById("hexRGB").style.display="block";
-    }else if (!rgb && num == 8){
-        document.getElementById("rgbHEX").style.display="none";
-        document.getElementById("hexRGB").style.display="none";
-    }
-    
-    if (color && num == 9) {
-        document.getElementById("randomColor").style.display="block";
-        document.getElementById("rgbHEX").style.display="block";
-        document.getElementById("hexRGB").style.display="block";
-    }else if (!color && num == 9){
-        document.getElementById("randomColor").style.display="none";
-        document.getElementById("rgbHEX").style.display="none";
-        document.getElementById("hexRGB").style.display="none";
-    }
-}
-
 ////////////8 BIT BINARY TO DECIMAL////////////
 function bitBinaryToDecimal() {
     var num1 = document.getElementById("num1").value;
@@ -220,7 +57,6 @@ function charCodeToAscii() {
 ////////////ASCII CHARACTER TO CHARACTER CODE////////////
 function asciiToCharCode() {
     var char = document.getElementById("asciiCode").value;
-    var codes;
     var code = char.charCodeAt();
     document.getElementById("resultAsciiCode").innerHTML = code;
 }
@@ -245,9 +81,23 @@ function charCodeToBin(){
 
 ////////////STANDARD CAESER CIPHER////////////
 function standardCaeser(){
+    var operation = document.getElementById("standardCS").value;
     var letters = 'abcdefghijklmnopqrstuvwxyz';
     var letterArr = letters.split(''); 
     var shift = document.getElementById("shiftStandard").value;
+    if (operation == 0) {
+        if (shift < 0 && shift > -27) {
+            shift = 26 + parseInt(shift);
+        }else if (shift < -26) {
+            shift = 26+(26 - Math.abs(shift));
+        }
+    }
+    else if (operation == 1){
+        shift = 26 - parseInt(shift);
+        if (shift < 0) {
+            shift = 26 - (Math.abs(shift)%26);
+        }
+    }
     var text = document.getElementById("caeserStandard").value;
     var textLower = text.toLowerCase();
     var chars = textLower.split('');
@@ -269,9 +119,75 @@ function standardCaeser(){
     }
 }
 
+////////////STANDARD CAESER CIPHER////////////
+function rotShift(){
+    var operation = document.getElementById("standardCS").value;
+    var letters = 'abcdefghijklmnopqrstuvwxyz';
+    var letterArr = letters.split(''); 
+    var shift = document.getElementById("shiftStandard").value;
+    if (operation == 0) {
+        if (shift < 0 && shift > -27) {
+            shift = 26 + parseInt(shift);
+        }else if (shift < -26) {
+            shift = 26+(26 - Math.abs(shift));
+        }
+    }
+    else if (operation == 1){
+        shift = 26 - parseInt(shift);
+        if (shift < 0) {
+            shift = 26 - (Math.abs(shift)%26);
+        }
+    }
+    var text = document.getElementById("caeserStandard").value;
+    var textLower = text.toLowerCase();
+    var chars = textLower.split('');
+    var letter = /^[A-Za-z]+$/;
+    var shifted = '';
+    var cont = true;
+    if (!text.match(letter)) {
+        alert("Please enter only characters (a-z/A-Z)");
+        cont = false;
+    } 
+    if (cont) {
+        chars.forEach(element => {
+            var charShift = parseInt(letterArr.indexOf(element)) + parseInt(shift);
+            var character = letters.charAt(charShift%26);
+            shifted = shifted + character;
+        });
+        print = "Lower: " + shifted + ', ' + "Upper: " + shifted.toUpperCase();
+        document.getElementById("resultStandard").innerHTML = print;
+    }
+}
+
+////////////COMPLEX CAESER CIPHER////////////
+function complexCaeser(){
+    var operation = document.getElementById("standardCS").value; 
+    var shift = document.getElementById("shiftAny").value;
+    var text = document.getElementById("caeserAny").value;
+    var chars = text.split('');
+    var shifted = '';
+    var cont = true;
+    if (cont) {
+        chars.forEach(element => {
+            console.log("ELEMENT: ", element);
+            var charShift = parseInt(element.charCodeAt());
+            console.log("Char Code: ", charShift);
+            console.log("Shift: ", shift);
+            var newChar = parseInt(charShift) + parseInt(shift);
+            console.log("New Char Code: ", newChar);
+            var character = String.fromCharCode(newChar);
+            console.log("New Character: ", character);
+            shifted = shifted + character;
+        });
+        print = "Lower: " + shifted + ', ' + "Upper: " + shifted.toUpperCase();
+        document.getElementById("resultAsciiCaeser").innerHTML = print;
+    }
+}
+
 ////////////RGB TO HEX////////////
 function rgbToHEX(r,g,b,set){
-    var arr = [r, g, b];      
+    var arr = [r, g, b];    
+    var opacity = document.getElementById("rgbOpacity").value;
     var hexChar1 = (Math.floor(r / 16)).toString(16);
     var hexChar2 = (r % 16).toString(16);
     var hexChar3 = (Math.floor(g / 16)).toString(16);
@@ -280,18 +196,26 @@ function rgbToHEX(r,g,b,set){
     var hexChar6 = (b % 16).toString(16);
     var hex = '#' + hexChar1 + hexChar2 + hexChar3 + hexChar4 + hexChar5 + hexChar6;
     var rgb = "rgb(" + r + ', ' + g + ', ' + b + ')';
+    var print = hex + " Opacity: " + opacity;
     if (set != 1){
-        document.getElementById("resultHEX").innerHTML = hex; 
+        document.getElementById("resultHEX").innerHTML = print; 
     }
     if (set == 1){
-        var print = "HEX: " + hex + ", " + "RGB: " + rgb;
-        document.getElementById("cColor").innerHTML = print;
+        var hex = color;    
+        var rgb = "rgb(" + r + ', ' + g + ', ' + b + ')';
+        var rgba = "rgba(" + r + ', ' + g + ', ' + b + ', ' + opacity + ')';
+
+        document.getElementById("cColorHex").innerHTML = hex;
+        document.getElementById("cColorRGB").innerHTML = rgb;
+        document.getElementById("cColorRGBA").innerHTML = rgba;
+        document.body.style.backgroundColor = rgba; 
     }
 }
 
 ///////////HEX to RGB//////////// 
 function HEXtoRGB(set, hexArr, hex) {
     var color;
+    var opacity = 1;
     if (hexArr.length == 7 && hexArr[0] == '#') {
         color = hex;    
         hexArr.shift();
@@ -310,8 +234,13 @@ function HEXtoRGB(set, hexArr, hex) {
         if(!color.includes('#')){
             color = "#" + color;
         }
-        var print = "HEX: " + color + ", " + "RGB: " + rgb;
-        document.getElementById("cColor").innerHTML = print;
+        var hex = color;    
+        var rgba = "rgba(" + r + ', ' + g + ', ' + b + ', ' + opacity + ')';
+
+        document.getElementById("cColorHex").innerHTML = hex;
+        document.getElementById("cColorRGB").innerHTML = rgb;
+        document.getElementById("cColorRGBA").innerHTML = rgba;
+        document.body.style.backgroundColor = rgba; 
     }
 }
 
@@ -322,16 +251,27 @@ function getRandomColor() {
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)]; 
   }
+  var opacity = 1;
+  var changeOpacity = document.getElementById("checkbox_opacity").checked;
+  if (changeOpacity) {
+    opacity = (Math.round(Math.random()*10))/10;    
+  }
+  else if (!changeOpacity){
+    opacity = 1;    
+  }
   var hexArr = color.split('')
   hexArr.shift();
   var r = (16 * parseInt(hexArr[0], 16)) + parseInt(hexArr[1], 16);
   var g = (16 * parseInt(hexArr[2], 16)) + parseInt(hexArr[3], 16);
   var b = (16 * parseInt(hexArr[4], 16)) + parseInt(hexArr[5], 16);
+  var hex = color;    
   var rgb = "rgb(" + r + ', ' + g + ', ' + b + ')';
+  var rgba = "rgba(" + r + ', ' + g + ', ' + b + ', ' + opacity + ')';
 
-  var print = "HEX: " + color + ", " + "RGB: " + rgb 
-  document.getElementById("cColor").innerHTML = print;
-  document.body.style.backgroundColor = color;
+  document.getElementById("cColorHex").innerHTML = hex;
+  document.getElementById("cColorRGB").innerHTML = rgb;
+  document.getElementById("cColorRGBA").innerHTML = rgba;
+  document.body.style.backgroundColor = rgba;   
   return color;
 }
 
@@ -401,11 +341,23 @@ function numChosenRGB() {
 function numChosenHEX() {
     var color = document.getElementById("inputHEX").value;
     var hexArr = color.split('');
+    var valid = 'abcdef012345678#';
+    var cont = true;
     if (hexArr.length == 7 && hexArr[0] != '#') {
         cont = false;
         alert("Please enter a valid hex value eg: '#FFFFFF' or 'FFFFFF'");
     }
-    else {
+    hexArr.forEach(element => {
+        element.toLowerCase();
+        var n = valid.includes(element);
+        if(!n){
+            if (cont){
+                alert("Please enter a valid HEX characters");
+            }
+            cont = false;
+        }
+    });
+    if(cont) {
         if (chosen == 1){
             setHexColor(hexArr, color);
         }

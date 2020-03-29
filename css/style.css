@@ -21,7 +21,7 @@ input {
     width:20%;
 }
 .inputCaeser {
-    width:42%;
+    width:43.5%;
 }
 .input {
   width:65%;
@@ -187,12 +187,30 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-#R-HEX {
+#R-HEX, #R-HEX::placeholder {
   color:red;
 }
-#G-HEX {
+#G-HEX, #G-HEX::placeholder {
   color:rgb(0,255,0);
 }
-#B-HEX {
+#B-HEX, #B-HEX::placeholder {
   color:blue;
+}
+
+#rgbOpacity, #rgbOpacity::placeholder{
+  color:white;
+}
+
+#cColorHex {
+    color: rgba(255,255,255, 0.6);
+}
+
+#cColorRGB {
+    color: rgba(255,255,235, 0.6);
+}
+#cColorRGBA {
+    color: rgba(255,255,255, 0.6);
+}
+.pColor {
+    display: inline;
 }
